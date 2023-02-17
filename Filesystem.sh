@@ -1,7 +1,7 @@
 #!/bin/bash
-date=`date +"%y-%m-%d_%t"| tr ':' '_'`
-Filename=/Documents/Bash/Filename_$Today.txt
-Pathname=/Documents/Bash/
+date=`date +"%y-%m-%d_%T"| tr ':' '_'`
+Filename=Documents/Bash/Filename_$date.txt
+Pathname=Documents/Bash
 
 Result=`df -h | awk '0+$5>=1' | wc | awk '{print $1}'`
 
@@ -20,5 +20,3 @@ else
 echo "No match found"
 
 fi
-
-
